@@ -5,10 +5,15 @@ import com.hughie.lint.problems.ProblemFactory;
 class MTool {
 
     static void print(int number, Object... args) {
+        final long startTime = System.currentTimeMillis();
         System.out.println(ProblemFactory.getResult(number, args).toString());
+        System.out.println("    ：耗时 " + (System.currentTimeMillis() - startTime) + "ms");
     }
 
     static void print(String problemEnumString, Object... args) {
+        final long startTime = System.currentTimeMillis();
         System.out.println(ProblemFactory.getResult(problemEnumString, args).toString());
+        System.out.println("    ：耗时 " + (System.currentTimeMillis() - startTime) + "ms");
     }
+
 }
