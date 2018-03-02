@@ -27,7 +27,16 @@ class P0001_A_Plus_B implements IResult{
      * @return : 返回值
      */
     private int plushAB(int a, int b) {
-        return a + b;
+        return recurseAB(a, b);
+//        return a + b;
+    }
+
+    /**
+     * 递归方法计算
+     * */
+    private int recurseAB(int a, int b) {
+        if(b == 0) return a;
+        return recurseAB(a ^ b, (a & b) << 1);
     }
 
     @Override
