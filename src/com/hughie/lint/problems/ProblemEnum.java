@@ -1,7 +1,8 @@
 package com.hughie.lint.problems;
 
 enum ProblemEnum {
-    P0001(1, P0001_A_Plus_B.class);
+    P0001(1, P0001_A_Plus_B.class),
+    P0002(2, P0002_TailZero.class),;
 
 
     ProblemEnum(int number, Class problemClass) {
